@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-./venv/bin/python -m pip install mod/
+#./venv/bin/python -m pip install mod/
 
 set -xeuo pipefail
 

@@ -83,14 +83,9 @@ static int tcp_init(tcp_state_t *self, PyObject *args, PyObject *)
     return 0;
 }
 
-static PyObject *tcp_new(PyTypeObject *type, PyObject *args, PyObject *kwargs)
+static PyObject *tcp_new(PyTypeObject *type, PyObject *, PyObject *)
 {
     tcp_state_t *self = (tcp_state_t *)type->tp_alloc(type, 0);
-    if (self != NULL) {
-        int init_res = tcp_init(self, args, kwargs);
-        if (init_res == -1)
-            self = NULL;
-    }
     return (PyObject *)self;
 }
 
